@@ -10,6 +10,7 @@ public class StudentDTO {
 
 	private String studentName;
 	private Collection<String> currentSubject;
+	private String mostPopularSubject;
 	private Boolean currentPopularSubject;
 
 	public StudentDTO(String studentName, Collection<String> currentSubject) {
@@ -23,6 +24,13 @@ public class StudentDTO {
 		this.studentName = studentName;
 		this.currentPopularSubject = currentPopularSubject;
 	}
+	
+	public StudentDTO(String studentName, Collection<String> currentSubject, String mostPopularSubject, boolean currentPopularSubject) {
+        this.studentName = studentName;
+        this.currentSubject = currentSubject;
+        this.mostPopularSubject = mostPopularSubject;
+        this.currentPopularSubject = currentPopularSubject;
+    }
 
 	public String getStudentName() {
 		return studentName;
@@ -34,5 +42,13 @@ public class StudentDTO {
 
 	public Boolean getCurrentPopularSubject() {
 		return currentPopularSubject;
+	}
+	
+	public String getMostPopularSubject() {
+		return mostPopularSubject;
+	}
+
+	public void setMostPopularSubject(String mostPopularSubject) {
+		this.mostPopularSubject = mostPopularSubject;
 	}
 }
